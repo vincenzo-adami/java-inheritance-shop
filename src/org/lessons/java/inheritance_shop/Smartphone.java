@@ -7,8 +7,7 @@ public class Smartphone extends Prodotto {
   long imei;
   int memoria; // misurabile in GB
 
-  Smartphone() {
-    super();
+  Smartphone(Prodotto prodotto) {
     setImei();
   }
 
@@ -29,6 +28,12 @@ public class Smartphone extends Prodotto {
 
   public int getMemoria() {
     return memoria;
+  }
+
+  @Override
+  public String toString() {
+    return String.format("Il prodotto %s, della marca %s,costa  €%s. \nIl suo IMEI è %d, è una capacità di %dGB",
+        getNomeEsteso(), getMarca(), getPrezzoIvato(), getImei(), getMemoria());
   }
 
 }
