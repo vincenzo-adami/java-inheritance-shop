@@ -10,10 +10,17 @@ public class Prodotto {
   private double prezzo;
   private double iva;
 
-  Prodotto() {
+  Prodotto(String nome, String marca, double prezzo, double iva) {
+    setCodice();
+    setIva(iva);
+    setNome(nome);
+    setMarca(marca);
+    setPrezzo(prezzo);
+  }
+
+  public void setCodice() {
     Random numRandom = new Random();
-    codice = numRandom.nextInt();
-    setIva(0.22);
+    codice = numRandom.nextInt(Integer.MAX_VALUE);
   }
 
   public int getCodice() {
@@ -66,7 +73,7 @@ public class Prodotto {
 
   @Override
   public String toString() {
-    return String.format("Il prodotto %s, della marca %s,costa  €%s", getNomeEsteso(), getMarca(), getPrezzoIvato());
+    return String.format("Il prodotto %s, della marca %s, costa €%s", getNomeEsteso(), getMarca(), getPrezzoIvato());
   }
 
 }
