@@ -2,10 +2,11 @@ package org.lessons.java.inheritance_shop;
 
 public class Televisori extends Prodotto {
 
-  byte dimensioni; // da valorizzare con i pollici
+  int dimensioni; // da valorizzare con i pollici
   boolean smart;
 
-  Televisori(Prodotto prodotto, byte dimensioni, boolean smart) {
+  Televisori(Prodotto prodotto, int dimensioni, boolean smart) {
+    super(prodotto.getNome(), prodotto.getMarca(), prodotto.getPrezzo(), prodotto.getIva());
     this.dimensioni = dimensioni;
     this.smart = smart;
   }
@@ -14,7 +15,7 @@ public class Televisori extends Prodotto {
     this.dimensioni = dimensioni;
   }
 
-  public byte getDimensioni() {
+  public int getDimensioni() {
     return this.dimensioni;
   }
 
@@ -32,7 +33,7 @@ public class Televisori extends Prodotto {
 
   @Override
   public String toString() {
-    return String.format("Il prodotto %s, della marca %s,costa  €%s. \nÈ grande %d\", %s",
+    return String.format("Il prodotto %s, della marca %s, costa €%s. \nÈ grande %d\", %s",
         getNomeEsteso(), getMarca(), getPrezzoIvato(), getDimensioni(), getSmart());
   }
 

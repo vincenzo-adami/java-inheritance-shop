@@ -6,6 +6,7 @@ public class Cuffie extends Prodotto {
   boolean wireless;
 
   Cuffie(Prodotto prodotto, String colore, boolean wireless) {
+    super(prodotto.getNome(), prodotto.getMarca(), prodotto.getPrezzo(), prodotto.getIva());
     this.colore = colore;
     this.wireless = wireless;
   }
@@ -32,7 +33,7 @@ public class Cuffie extends Prodotto {
 
   @Override
   public String toString() {
-    return String.format("Il prodotto %s, della marca %s,costa  €%s. \nÈ di colore %s\" e %s",
+    return String.format("Il prodotto %s, della marca %s,costa €%s. \nÈ di colore %s e %s",
         getNomeEsteso(), getMarca(), getPrezzoIvato(), getColore(), getWirless());
   }
 
