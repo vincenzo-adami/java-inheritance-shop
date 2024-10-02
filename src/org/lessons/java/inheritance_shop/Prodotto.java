@@ -64,4 +64,9 @@ public class Prodotto {
     return codice + "-" + nome;
   }
 
+  @Override
+  public String toString() {
+    return String.format("Il prodotto %s, della marca %s,costa  €%s", getNomeEsteso(), getMarca(), getPrezzoIvato());
+  }
+
 }
