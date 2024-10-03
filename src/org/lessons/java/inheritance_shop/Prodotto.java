@@ -18,7 +18,7 @@ public class Prodotto {
     setPrezzo(prezzo);
   }
 
-  public void setCodice() {
+  private void setCodice() {
     Random numRandom = new Random();
     codice = numRandom.nextInt(Integer.MAX_VALUE);
   }
