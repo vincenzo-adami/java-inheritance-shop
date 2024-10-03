@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Smartphone extends Prodotto {
 
-  long imei;
+  String imei;
   int memoria; // misurabile in GB
 
   Smartphone(Prodotto prodotto, int memoria) {
@@ -17,10 +17,10 @@ public class Smartphone extends Prodotto {
     Random rng = new Random();
     long lowerLimit = 0000000000000000L;
     long upperLimit = 9999999999999999L;
-    this.imei = rng.nextLong(lowerLimit, upperLimit + 1);
+    this.imei = Long.toString(rng.nextLong(lowerLimit, upperLimit + 1));
   }
 
-  public long getImei() {
+  public String getImei() {
     return this.imei;
   }
 

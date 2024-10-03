@@ -23,7 +23,11 @@ public class Cuffie extends Prodotto {
     this.wireless = wireless;
   }
 
-  public String getWirless() {
+  public boolean isWireless() {
+    return wireless;
+  }
+
+  public String isWirlessDescription() {
     if (wireless) {
       return "sono wireless!";
     } else {
@@ -34,7 +38,7 @@ public class Cuffie extends Prodotto {
   @Override
   public String toString() {
     return String.format("Il prodotto %s, della marca %s,costa €%s. \nÈ di colore %s e %s",
-        getNomeEsteso(), getMarca(), getPrezzoIvato(), getColore(), getWirless());
+        getNomeEsteso(), getMarca(), getPrezzoIvato(), getColore(), isWirlessDescription());
   }
 
 }

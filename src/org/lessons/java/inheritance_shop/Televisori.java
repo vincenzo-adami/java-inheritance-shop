@@ -23,7 +23,11 @@ public class Televisori extends Prodotto {
     this.smart = smart;
   }
 
-  public String getSmart() {
+  public boolean isSmart() {
+    return smart;
+  }
+
+  public String getSmartDescrizione() {
     if (smart) {
       return "è smart!";
     } else {
@@ -34,7 +38,7 @@ public class Televisori extends Prodotto {
   @Override
   public String toString() {
     return String.format("Il prodotto %s, della marca %s, costa €%s. \nÈ grande %d\", %s",
-        getNomeEsteso(), getMarca(), getPrezzoIvato(), getDimensioni(), getSmart());
+        getNomeEsteso(), getMarca(), getPrezzoIvato(), getDimensioni(), getSmartDescrizione());
   }
 
 }
