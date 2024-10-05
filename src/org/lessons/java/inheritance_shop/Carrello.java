@@ -86,7 +86,9 @@ public class Carrello {
           break;
 
         default:
-          carrello[i] = new Prodotto("nome_generico", "marca_generica", 1, 0.0);
+          System.out.println("Selezionato prodotto non valido, valorizzato con prodotto generico");
+          System.out.println("");
+          carrello[i] = new Prodotto("nome_generico", "marca_generica", 1, 0.22);
 
       }
 
