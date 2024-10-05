@@ -34,8 +34,7 @@ public class Smartphone extends Prodotto {
 
   @Override
   public String toString() {
-    return String.format("Il prodotto %s, della marca %s, costa €%s. \nIl suo IMEI è %s, è una capacità di %dGB",
-        getNomeEsteso(), getMarca(), getPrezzoIvato(), getImei(), getMemoria());
+    return super.toString() + String.format("\nIl suo IMEI è %s, ed ha una capacità di %dGB", getImei(), getMemoria());
   }
 
 }

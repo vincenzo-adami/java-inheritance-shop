@@ -37,8 +37,7 @@ public class Cuffie extends Prodotto {
 
   @Override
   public String toString() {
-    return String.format("Il prodotto %s, della marca %s,costa €%s. \nÈ di colore %s e %s",
-        getNomeEsteso(), getMarca(), getPrezzoIvato(), getColore(), isWirlessDescription());
+    return super.toString() + String.format("\nÈ di colore %s e %s", getColore(), isWirlessDescription());
   }
 
 }

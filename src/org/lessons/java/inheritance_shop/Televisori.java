@@ -37,8 +37,7 @@ public class Televisori extends Prodotto {
 
   @Override
   public String toString() {
-    return String.format("Il prodotto %s, della marca %s, costa €%s. \nÈ grande %d\", %s",
-        getNomeEsteso(), getMarca(), getPrezzoIvato(), getDimensioni(), getSmartDescrizione());
+    return super.toString() + String.format("\nÈ grande %d\", %s", getDimensioni(), getSmartDescrizione());
   }
 
 }
