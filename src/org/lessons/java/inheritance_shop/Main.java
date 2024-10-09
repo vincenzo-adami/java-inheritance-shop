@@ -2,7 +2,7 @@ package org.lessons.java.inheritance_shop;
 
 import java.util.Scanner;
 
-public class Carrello {
+public class Main {
 
   public static void main(String[] args) {
 

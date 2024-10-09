@@ -11,16 +11,12 @@ public class Prodotto {
   private double iva;
 
   Prodotto(String nome, String marca, double prezzo, double iva) {
-    setCodice();
+    Random numRandom = new Random();
+    codice = numRandom.nextInt(Integer.MAX_VALUE);
     setIva(iva);
     setNome(nome);
     setMarca(marca);
     setPrezzo(prezzo);
-  }
-
-  private void setCodice() {
-    Random numRandom = new Random();
-    codice = numRandom.nextInt(Integer.MAX_VALUE);
   }
 
   public int getCodice() {
